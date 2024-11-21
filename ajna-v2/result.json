@@ -1,0 +1,4760 @@
+{
+    "0x9a96ec9B57Fb64FbC60B423d1f4da7691Bd35079": {
+        "IVotes": {
+            "Contract_Name": "IVotes",
+            "Functions": []
+        },
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "ERC20Burnable": {
+            "Contract_Name": "ERC20Burnable",
+            "Functions": []
+        },
+        "ERC20Votes": {
+            "Contract_Name": "ERC20Votes",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "ERC20Permit": {
+            "Contract_Name": "ERC20Permit",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Counters": {
+            "Contract_Name": "Counters",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "ECDSA": {
+            "Contract_Name": "ECDSA",
+            "Functions": []
+        },
+        "EIP712": {
+            "Contract_Name": "EIP712",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "AjnaToken": {
+            "Contract_Name": "AjnaToken",
+            "Functions": []
+        }
+    },
+    "0x6146DD43C5622bB6D12A5240ab9CF4de14eDC625": {
+        "Clone": {
+            "Contract_Name": "Clone",
+            "Functions": []
+        },
+        "ClonesWithImmutableArgs": {
+            "Contract_Name": "ClonesWithImmutableArgs",
+            "Functions": []
+        },
+        "ReentrancyGuard": {
+            "Contract_Name": "ReentrancyGuard",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "PRBMath": {
+            "Contract_Name": "PRBMath",
+            "Functions": []
+        },
+        "PRBMathSD59x18": {
+            "Contract_Name": "PRBMathSD59x18",
+            "Functions": []
+        },
+        "PRBMathUD60x18": {
+            "Contract_Name": "PRBMathUD60x18",
+            "Functions": []
+        },
+        "ERC20Pool": {
+            "Contract_Name": "ERC20Pool",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "addCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "removeCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "settle",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState",
+                        "poolBalances"
+                    ]
+                },
+                {
+                    "Function": "take",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "bucketTake",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "_status": 882550301846845798700105676842253492877247336569
+            }
+        },
+        "ERC20PoolFactory": {
+            "Contract_Name": "ERC20PoolFactory",
+            "Functions": [
+                {
+                    "Function": "deployPool",
+                    "Modifiers": [
+                        "canDeploy"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MIN_RATE",
+                        "quote_",
+                        "MAX_RATE",
+                        "collateral_",
+                        "interestRate_"
+                    ],
+                    "state_variables_written": [
+                        "deployedPoolsList",
+                        "deployedPools"
+                    ]
+                }
+            ]
+        },
+        "FlashloanablePool": {
+            "Contract_Name": "FlashloanablePool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "Pool": {
+            "Contract_Name": "Pool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "_status",
+                        "inflatorState"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "reserveAuction",
+                        "poolBalances",
+                        "_status",
+                        "inflatorState",
+                        "interestState"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "PoolDeployer": {
+            "Contract_Name": "PoolDeployer",
+            "Functions": []
+        },
+        "IERC3156FlashBorrower": {
+            "Contract_Name": "IERC3156FlashBorrower",
+            "Functions": []
+        },
+        "IERC3156FlashLender": {
+            "Contract_Name": "IERC3156FlashLender",
+            "Functions": []
+        },
+        "IPool": {
+            "Contract_Name": "IPool",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "IERC721Token": {
+            "Contract_Name": "IERC721Token",
+            "Functions": []
+        },
+        "IPoolFactory": {
+            "Contract_Name": "IPoolFactory",
+            "Functions": []
+        },
+        "IPoolBorrowerActions": {
+            "Contract_Name": "IPoolBorrowerActions",
+            "Functions": []
+        },
+        "IPoolDerivedState": {
+            "Contract_Name": "IPoolDerivedState",
+            "Functions": []
+        },
+        "IPoolErrors": {
+            "Contract_Name": "IPoolErrors",
+            "Functions": []
+        },
+        "IPoolEvents": {
+            "Contract_Name": "IPoolEvents",
+            "Functions": []
+        },
+        "IPoolImmutables": {
+            "Contract_Name": "IPoolImmutables",
+            "Functions": []
+        },
+        "IPoolKickerActions": {
+            "Contract_Name": "IPoolKickerActions",
+            "Functions": []
+        },
+        "IPoolLPActions": {
+            "Contract_Name": "IPoolLPActions",
+            "Functions": []
+        },
+        "IPoolLenderActions": {
+            "Contract_Name": "IPoolLenderActions",
+            "Functions": []
+        },
+        "IPoolSettlerActions": {
+            "Contract_Name": "IPoolSettlerActions",
+            "Functions": []
+        },
+        "IPoolState": {
+            "Contract_Name": "IPoolState",
+            "Functions": []
+        },
+        "IPoolTakerActions": {
+            "Contract_Name": "IPoolTakerActions",
+            "Functions": []
+        },
+        "IERC20Pool": {
+            "Contract_Name": "IERC20Pool",
+            "Functions": []
+        },
+        "IERC20PoolBorrowerActions": {
+            "Contract_Name": "IERC20PoolBorrowerActions",
+            "Functions": []
+        },
+        "IERC20PoolEvents": {
+            "Contract_Name": "IERC20PoolEvents",
+            "Functions": []
+        },
+        "IERC20PoolFactory": {
+            "Contract_Name": "IERC20PoolFactory",
+            "Functions": []
+        },
+        "IERC20PoolImmutables": {
+            "Contract_Name": "IERC20PoolImmutables",
+            "Functions": []
+        },
+        "IERC20PoolLenderActions": {
+            "Contract_Name": "IERC20PoolLenderActions",
+            "Functions": []
+        },
+        "IERC20Taker": {
+            "Contract_Name": "IERC20Taker",
+            "Functions": []
+        },
+        "BorrowerActions": {
+            "Contract_Name": "BorrowerActions",
+            "Functions": [
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "KickerActions": {
+            "Contract_Name": "KickerActions",
+            "Functions": []
+        },
+        "LPActions": {
+            "Contract_Name": "LPActions",
+            "Functions": [
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "LenderActions": {
+            "Contract_Name": "LenderActions",
+            "Functions": []
+        },
+        "PoolCommons": {
+            "Contract_Name": "PoolCommons",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "SettlerActions": {
+            "Contract_Name": "SettlerActions",
+            "Functions": []
+        },
+        "TakerActions": {
+            "Contract_Name": "TakerActions",
+            "Functions": []
+        },
+        "Buckets": {
+            "Contract_Name": "Buckets",
+            "Functions": []
+        },
+        "Deposits": {
+            "Contract_Name": "Deposits",
+            "Functions": []
+        },
+        "Loans": {
+            "Contract_Name": "Loans",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    },
+    "0x27461199d3b7381De66a85D685828E967E35AF4c": {
+        "Clone": {
+            "Contract_Name": "Clone",
+            "Functions": []
+        },
+        "ClonesWithImmutableArgs": {
+            "Contract_Name": "ClonesWithImmutableArgs",
+            "Functions": []
+        },
+        "ReentrancyGuard": {
+            "Contract_Name": "ReentrancyGuard",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "PRBMath": {
+            "Contract_Name": "PRBMath",
+            "Functions": []
+        },
+        "PRBMathSD59x18": {
+            "Contract_Name": "PRBMathSD59x18",
+            "Functions": []
+        },
+        "PRBMathUD60x18": {
+            "Contract_Name": "PRBMathUD60x18",
+            "Functions": []
+        },
+        "ERC721Pool": {
+            "Contract_Name": "ERC721Pool",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "addCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "mergeOrRemoveCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "settle",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "_status",
+                        "reserveAuction",
+                        "bucketTokenIds"
+                    ]
+                },
+                {
+                    "Function": "take",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction",
+                        "bucketTokenIds"
+                    ]
+                },
+                {
+                    "Function": "bucketTake",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction",
+                        "bucketTokenIds"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "_status": 882550301846845798700105676842253492877247336569
+            }
+        },
+        "ERC721PoolFactory": {
+            "Contract_Name": "ERC721PoolFactory",
+            "Functions": [
+                {
+                    "Function": "deployPool",
+                    "Modifiers": [
+                        "canDeploy"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MIN_RATE",
+                        "collateral_",
+                        "interestRate_",
+                        "quote_",
+                        "MAX_RATE"
+                    ],
+                    "state_variables_written": [
+                        "deployedPoolsList",
+                        "deployedPools"
+                    ]
+                }
+            ]
+        },
+        "FlashloanablePool": {
+            "Contract_Name": "FlashloanablePool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_ENTERED",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "Pool": {
+            "Contract_Name": "Pool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "_status",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_status",
+                        "_NOT_ENTERED",
+                        "_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "PoolDeployer": {
+            "Contract_Name": "PoolDeployer",
+            "Functions": []
+        },
+        "IERC3156FlashBorrower": {
+            "Contract_Name": "IERC3156FlashBorrower",
+            "Functions": []
+        },
+        "IERC3156FlashLender": {
+            "Contract_Name": "IERC3156FlashLender",
+            "Functions": []
+        },
+        "IPool": {
+            "Contract_Name": "IPool",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "IERC721Token": {
+            "Contract_Name": "IERC721Token",
+            "Functions": []
+        },
+        "IPoolFactory": {
+            "Contract_Name": "IPoolFactory",
+            "Functions": []
+        },
+        "IPoolBorrowerActions": {
+            "Contract_Name": "IPoolBorrowerActions",
+            "Functions": []
+        },
+        "IPoolDerivedState": {
+            "Contract_Name": "IPoolDerivedState",
+            "Functions": []
+        },
+        "IPoolErrors": {
+            "Contract_Name": "IPoolErrors",
+            "Functions": []
+        },
+        "IPoolEvents": {
+            "Contract_Name": "IPoolEvents",
+            "Functions": []
+        },
+        "IPoolImmutables": {
+            "Contract_Name": "IPoolImmutables",
+            "Functions": []
+        },
+        "IPoolKickerActions": {
+            "Contract_Name": "IPoolKickerActions",
+            "Functions": []
+        },
+        "IPoolLPActions": {
+            "Contract_Name": "IPoolLPActions",
+            "Functions": []
+        },
+        "IPoolLenderActions": {
+            "Contract_Name": "IPoolLenderActions",
+            "Functions": []
+        },
+        "IPoolSettlerActions": {
+            "Contract_Name": "IPoolSettlerActions",
+            "Functions": []
+        },
+        "IPoolState": {
+            "Contract_Name": "IPoolState",
+            "Functions": []
+        },
+        "IPoolTakerActions": {
+            "Contract_Name": "IPoolTakerActions",
+            "Functions": []
+        },
+        "IERC721Pool": {
+            "Contract_Name": "IERC721Pool",
+            "Functions": []
+        },
+        "IERC721PoolBorrowerActions": {
+            "Contract_Name": "IERC721PoolBorrowerActions",
+            "Functions": []
+        },
+        "IERC721PoolErrors": {
+            "Contract_Name": "IERC721PoolErrors",
+            "Functions": []
+        },
+        "IERC721PoolEvents": {
+            "Contract_Name": "IERC721PoolEvents",
+            "Functions": []
+        },
+        "IERC721PoolFactory": {
+            "Contract_Name": "IERC721PoolFactory",
+            "Functions": []
+        },
+        "IERC721PoolImmutables": {
+            "Contract_Name": "IERC721PoolImmutables",
+            "Functions": []
+        },
+        "IERC721PoolLenderActions": {
+            "Contract_Name": "IERC721PoolLenderActions",
+            "Functions": []
+        },
+        "IERC721PoolState": {
+            "Contract_Name": "IERC721PoolState",
+            "Functions": []
+        },
+        "IERC721Taker": {
+            "Contract_Name": "IERC721Taker",
+            "Functions": []
+        },
+        "BorrowerActions": {
+            "Contract_Name": "BorrowerActions",
+            "Functions": [
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "KickerActions": {
+            "Contract_Name": "KickerActions",
+            "Functions": []
+        },
+        "LPActions": {
+            "Contract_Name": "LPActions",
+            "Functions": [
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "LenderActions": {
+            "Contract_Name": "LenderActions",
+            "Functions": []
+        },
+        "PoolCommons": {
+            "Contract_Name": "PoolCommons",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "SettlerActions": {
+            "Contract_Name": "SettlerActions",
+            "Functions": []
+        },
+        "TakerActions": {
+            "Contract_Name": "TakerActions",
+            "Functions": []
+        },
+        "Buckets": {
+            "Contract_Name": "Buckets",
+            "Functions": []
+        },
+        "Deposits": {
+            "Contract_Name": "Deposits",
+            "Functions": []
+        },
+        "Loans": {
+            "Contract_Name": "Loans",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    },
+    "0x30c5eF2997d6a882DE52c4ec01B6D0a5e5B4fAAE": {
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "PRBMath": {
+            "Contract_Name": "PRBMath",
+            "Functions": []
+        },
+        "PRBMathSD59x18": {
+            "Contract_Name": "PRBMathSD59x18",
+            "Functions": []
+        },
+        "PRBMathUD60x18": {
+            "Contract_Name": "PRBMathUD60x18",
+            "Functions": []
+        },
+        "PoolInfoUtils": {
+            "Contract_Name": "PoolInfoUtils",
+            "Functions": []
+        },
+        "IERC3156FlashBorrower": {
+            "Contract_Name": "IERC3156FlashBorrower",
+            "Functions": []
+        },
+        "IERC3156FlashLender": {
+            "Contract_Name": "IERC3156FlashLender",
+            "Functions": []
+        },
+        "IPool": {
+            "Contract_Name": "IPool",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "IERC721Token": {
+            "Contract_Name": "IERC721Token",
+            "Functions": []
+        },
+        "IPoolBorrowerActions": {
+            "Contract_Name": "IPoolBorrowerActions",
+            "Functions": []
+        },
+        "IPoolDerivedState": {
+            "Contract_Name": "IPoolDerivedState",
+            "Functions": []
+        },
+        "IPoolErrors": {
+            "Contract_Name": "IPoolErrors",
+            "Functions": []
+        },
+        "IPoolEvents": {
+            "Contract_Name": "IPoolEvents",
+            "Functions": []
+        },
+        "IPoolImmutables": {
+            "Contract_Name": "IPoolImmutables",
+            "Functions": []
+        },
+        "IPoolKickerActions": {
+            "Contract_Name": "IPoolKickerActions",
+            "Functions": []
+        },
+        "IPoolLPActions": {
+            "Contract_Name": "IPoolLPActions",
+            "Functions": []
+        },
+        "IPoolLenderActions": {
+            "Contract_Name": "IPoolLenderActions",
+            "Functions": []
+        },
+        "IPoolSettlerActions": {
+            "Contract_Name": "IPoolSettlerActions",
+            "Functions": []
+        },
+        "IPoolState": {
+            "Contract_Name": "IPoolState",
+            "Functions": []
+        },
+        "IPoolTakerActions": {
+            "Contract_Name": "IPoolTakerActions",
+            "Functions": []
+        },
+        "PoolCommons": {
+            "Contract_Name": "PoolCommons",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Buckets": {
+            "Contract_Name": "Buckets",
+            "Functions": []
+        },
+        "Deposits": {
+            "Contract_Name": "Deposits",
+            "Functions": []
+        },
+        "Loans": {
+            "Contract_Name": "Loans",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    },
+    "0xe4e553243264f2bF7C135F1eC3a8c09078731227": {
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "PRBMath": {
+            "Contract_Name": "PRBMath",
+            "Functions": []
+        },
+        "PRBMathSD59x18": {
+            "Contract_Name": "PRBMathSD59x18",
+            "Functions": []
+        },
+        "PRBMathUD60x18": {
+            "Contract_Name": "PRBMathUD60x18",
+            "Functions": []
+        },
+        "PoolInfoUtils": {
+            "Contract_Name": "PoolInfoUtils",
+            "Functions": []
+        },
+        "PoolInfoUtilsMulticall": {
+            "Contract_Name": "PoolInfoUtilsMulticall",
+            "Functions": []
+        },
+        "IERC3156FlashBorrower": {
+            "Contract_Name": "IERC3156FlashBorrower",
+            "Functions": []
+        },
+        "IERC3156FlashLender": {
+            "Contract_Name": "IERC3156FlashLender",
+            "Functions": []
+        },
+        "IPool": {
+            "Contract_Name": "IPool",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "IERC721Token": {
+            "Contract_Name": "IERC721Token",
+            "Functions": []
+        },
+        "IPoolBorrowerActions": {
+            "Contract_Name": "IPoolBorrowerActions",
+            "Functions": []
+        },
+        "IPoolDerivedState": {
+            "Contract_Name": "IPoolDerivedState",
+            "Functions": []
+        },
+        "IPoolErrors": {
+            "Contract_Name": "IPoolErrors",
+            "Functions": []
+        },
+        "IPoolEvents": {
+            "Contract_Name": "IPoolEvents",
+            "Functions": []
+        },
+        "IPoolImmutables": {
+            "Contract_Name": "IPoolImmutables",
+            "Functions": []
+        },
+        "IPoolKickerActions": {
+            "Contract_Name": "IPoolKickerActions",
+            "Functions": []
+        },
+        "IPoolLPActions": {
+            "Contract_Name": "IPoolLPActions",
+            "Functions": []
+        },
+        "IPoolLenderActions": {
+            "Contract_Name": "IPoolLenderActions",
+            "Functions": []
+        },
+        "IPoolSettlerActions": {
+            "Contract_Name": "IPoolSettlerActions",
+            "Functions": []
+        },
+        "IPoolState": {
+            "Contract_Name": "IPoolState",
+            "Functions": []
+        },
+        "IPoolTakerActions": {
+            "Contract_Name": "IPoolTakerActions",
+            "Functions": []
+        },
+        "IERC20Pool": {
+            "Contract_Name": "IERC20Pool",
+            "Functions": []
+        },
+        "IERC20PoolBorrowerActions": {
+            "Contract_Name": "IERC20PoolBorrowerActions",
+            "Functions": []
+        },
+        "IERC20PoolEvents": {
+            "Contract_Name": "IERC20PoolEvents",
+            "Functions": []
+        },
+        "IERC20PoolImmutables": {
+            "Contract_Name": "IERC20PoolImmutables",
+            "Functions": []
+        },
+        "IERC20PoolLenderActions": {
+            "Contract_Name": "IERC20PoolLenderActions",
+            "Functions": []
+        },
+        "PoolCommons": {
+            "Contract_Name": "PoolCommons",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Buckets": {
+            "Contract_Name": "Buckets",
+            "Functions": []
+        },
+        "Deposits": {
+            "Contract_Name": "Deposits",
+            "Functions": []
+        },
+        "Loans": {
+            "Contract_Name": "Loans",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    },
+    "0x87B0F458d8F1ACD28A83A748bFFbE24bD6B701B1": {
+        "Base64": {
+            "Contract_Name": "Base64",
+            "Functions": []
+        },
+        "Clone": {
+            "Contract_Name": "Clone",
+            "Functions": []
+        },
+        "ClonesWithImmutableArgs": {
+            "Contract_Name": "ClonesWithImmutableArgs",
+            "Functions": []
+        },
+        "IERC1271": {
+            "Contract_Name": "IERC1271",
+            "Functions": []
+        },
+        "ReentrancyGuard": {
+            "Contract_Name": "ReentrancyGuard",
+            "Functions": []
+        },
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "ERC721": {
+            "Contract_Name": "ERC721",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Receiver": {
+            "Contract_Name": "IERC721Receiver",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "ECDSA": {
+            "Contract_Name": "ECDSA",
+            "Functions": []
+        },
+        "SignatureChecker": {
+            "Contract_Name": "SignatureChecker",
+            "Functions": []
+        },
+        "ERC165": {
+            "Contract_Name": "ERC165",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "EnumerableSet": {
+            "Contract_Name": "EnumerableSet",
+            "Functions": []
+        },
+        "PRBMath": {
+            "Contract_Name": "PRBMath",
+            "Functions": []
+        },
+        "PRBMathSD59x18": {
+            "Contract_Name": "PRBMathSD59x18",
+            "Functions": []
+        },
+        "PRBMathUD60x18": {
+            "Contract_Name": "PRBMathUD60x18",
+            "Functions": []
+        },
+        "ERC20Pool": {
+            "Contract_Name": "ERC20Pool",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "settle",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "poolBalances",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "take",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "bucketTake",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "ERC20PoolFactory": {
+            "Contract_Name": "ERC20PoolFactory",
+            "Functions": [
+                {
+                    "Function": "deployPool",
+                    "Modifiers": [
+                        "canDeploy"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MIN_RATE",
+                        "quote_",
+                        "collateral_",
+                        "MAX_RATE",
+                        "interestRate_"
+                    ],
+                    "state_variables_written": [
+                        "deployedPoolsList",
+                        "deployedPools"
+                    ]
+                }
+            ]
+        },
+        "ERC721Pool": {
+            "Contract_Name": "ERC721Pool",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "addCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "mergeOrRemoveCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeCollateral",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "settle",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "reserveAuction",
+                        "bucketTokenIds",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "take",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "bucketTokenIds",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "bucketTake",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "bucketTokenIds",
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "ERC721PoolFactory": {
+            "Contract_Name": "ERC721PoolFactory",
+            "Functions": [
+                {
+                    "Function": "deployPool",
+                    "Modifiers": [
+                        "canDeploy"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "collateral_",
+                        "MIN_RATE",
+                        "quote_",
+                        "MAX_RATE",
+                        "interestRate_"
+                    ],
+                    "state_variables_written": [
+                        "deployedPoolsList",
+                        "deployedPools"
+                    ]
+                }
+            ]
+        },
+        "PositionManager": {
+            "Contract_Name": "PositionManager",
+            "Functions": [
+                {
+                    "Function": "burn",
+                    "Modifiers": [
+                        "mayInteract"
+                    ],
+                    "msg.sender_conditions": [
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)",
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "positionTokens",
+                        "owner",
+                        "spender",
+                        "_tokenApprovals",
+                        "tokenId",
+                        "tokenId",
+                        "tokenId",
+                        "owner",
+                        "_owners",
+                        "pool_",
+                        "owner",
+                        "tokenId",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "operator",
+                        "tokenId",
+                        "tokenId_"
+                    ],
+                    "state_variables_written": [
+                        "_tokenApprovals",
+                        "_balances",
+                        "_nonces",
+                        "_owners",
+                        "positionTokens"
+                    ]
+                },
+                {
+                    "Function": "memorializePositions",
+                    "Modifiers": [
+                        "mayInteract"
+                    ],
+                    "msg.sender_conditions": [
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)",
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "positionTokens",
+                        "owner",
+                        "spender",
+                        "_tokenApprovals",
+                        "tokenId",
+                        "tokenId",
+                        "tokenId",
+                        "owner",
+                        "_owners",
+                        "pool_",
+                        "owner",
+                        "tokenId",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "operator",
+                        "tokenId",
+                        "tokenId_"
+                    ],
+                    "state_variables_written": [
+                        "positionTokens"
+                    ]
+                },
+                {
+                    "Function": "mint",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "positionTokens",
+                        "_nextId",
+                        "_balances",
+                        "_owners",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "moveLiquidity",
+                    "Modifiers": [
+                        "mayInteract",
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)",
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status",
+                        "positionTokens",
+                        "owner",
+                        "spender",
+                        "_tokenApprovals",
+                        "tokenId",
+                        "tokenId",
+                        "tokenId",
+                        "owner",
+                        "_owners",
+                        "pool_",
+                        "owner",
+                        "tokenId",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "operator",
+                        "tokenId",
+                        "tokenId_"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "redeemPositions",
+                    "Modifiers": [
+                        "mayInteract"
+                    ],
+                    "msg.sender_conditions": [
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)",
+                        "! _isApprovedOrOwner(msg.sender,tokenId_)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "positionTokens",
+                        "owner",
+                        "spender",
+                        "_tokenApprovals",
+                        "tokenId",
+                        "tokenId",
+                        "tokenId",
+                        "owner",
+                        "_owners",
+                        "pool_",
+                        "owner",
+                        "tokenId",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "operator",
+                        "tokenId",
+                        "tokenId_"
+                    ],
+                    "state_variables_written": []
+                }
+            ],
+            "storage_values": {
+                "_status": 1,
+                "_owners": 0,
+                "_tokenApprovals": 0,
+                "_operatorApprovals": false,
+                "positionTokens": 0
+            }
+        },
+        "FlashloanablePool": {
+            "Contract_Name": "FlashloanablePool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_NOT_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "IPermit": {
+            "Contract_Name": "IPermit",
+            "Functions": []
+        },
+        "PermitERC721": {
+            "Contract_Name": "PermitERC721",
+            "Functions": []
+        },
+        "Pool": {
+            "Contract_Name": "Pool",
+            "Functions": [
+                {
+                    "Function": "addQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "moveQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "removeQuoteToken",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "updateInterest",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status",
+                        "inflatorState",
+                        "reserveAuction"
+                    ]
+                },
+                {
+                    "Function": "kick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "lenderKick",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "poolBalances",
+                        "inflatorState",
+                        "interestState",
+                        "reserveAuction",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "withdrawBonds",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "kickReserveAuction",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "takeReserves",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "increaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "decreaseLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "revokeLPAllowance",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_NOT_ENTERED",
+                        "_ENTERED",
+                        "_status"
+                    ],
+                    "state_variables_written": [
+                        "_status"
+                    ]
+                }
+            ]
+        },
+        "PoolDeployer": {
+            "Contract_Name": "PoolDeployer",
+            "Functions": []
+        },
+        "IERC3156FlashBorrower": {
+            "Contract_Name": "IERC3156FlashBorrower",
+            "Functions": []
+        },
+        "IERC3156FlashLender": {
+            "Contract_Name": "IERC3156FlashLender",
+            "Functions": []
+        },
+        "IPool": {
+            "Contract_Name": "IPool",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "IERC721Token": {
+            "Contract_Name": "IERC721Token",
+            "Functions": []
+        },
+        "IPoolFactory": {
+            "Contract_Name": "IPoolFactory",
+            "Functions": []
+        },
+        "IPoolBorrowerActions": {
+            "Contract_Name": "IPoolBorrowerActions",
+            "Functions": []
+        },
+        "IPoolDerivedState": {
+            "Contract_Name": "IPoolDerivedState",
+            "Functions": []
+        },
+        "IPoolErrors": {
+            "Contract_Name": "IPoolErrors",
+            "Functions": []
+        },
+        "IPoolEvents": {
+            "Contract_Name": "IPoolEvents",
+            "Functions": []
+        },
+        "IPoolImmutables": {
+            "Contract_Name": "IPoolImmutables",
+            "Functions": []
+        },
+        "IPoolKickerActions": {
+            "Contract_Name": "IPoolKickerActions",
+            "Functions": []
+        },
+        "IPoolLPActions": {
+            "Contract_Name": "IPoolLPActions",
+            "Functions": []
+        },
+        "IPoolLenderActions": {
+            "Contract_Name": "IPoolLenderActions",
+            "Functions": []
+        },
+        "IPoolSettlerActions": {
+            "Contract_Name": "IPoolSettlerActions",
+            "Functions": []
+        },
+        "IPoolState": {
+            "Contract_Name": "IPoolState",
+            "Functions": []
+        },
+        "IPoolTakerActions": {
+            "Contract_Name": "IPoolTakerActions",
+            "Functions": []
+        },
+        "IERC20Pool": {
+            "Contract_Name": "IERC20Pool",
+            "Functions": []
+        },
+        "IERC20PoolBorrowerActions": {
+            "Contract_Name": "IERC20PoolBorrowerActions",
+            "Functions": []
+        },
+        "IERC20PoolEvents": {
+            "Contract_Name": "IERC20PoolEvents",
+            "Functions": []
+        },
+        "IERC20PoolFactory": {
+            "Contract_Name": "IERC20PoolFactory",
+            "Functions": []
+        },
+        "IERC20PoolImmutables": {
+            "Contract_Name": "IERC20PoolImmutables",
+            "Functions": []
+        },
+        "IERC20PoolLenderActions": {
+            "Contract_Name": "IERC20PoolLenderActions",
+            "Functions": []
+        },
+        "IERC20Taker": {
+            "Contract_Name": "IERC20Taker",
+            "Functions": []
+        },
+        "IERC721Pool": {
+            "Contract_Name": "IERC721Pool",
+            "Functions": []
+        },
+        "IERC721PoolBorrowerActions": {
+            "Contract_Name": "IERC721PoolBorrowerActions",
+            "Functions": []
+        },
+        "IERC721PoolErrors": {
+            "Contract_Name": "IERC721PoolErrors",
+            "Functions": []
+        },
+        "IERC721PoolEvents": {
+            "Contract_Name": "IERC721PoolEvents",
+            "Functions": []
+        },
+        "IERC721PoolFactory": {
+            "Contract_Name": "IERC721PoolFactory",
+            "Functions": []
+        },
+        "IERC721PoolImmutables": {
+            "Contract_Name": "IERC721PoolImmutables",
+            "Functions": []
+        },
+        "IERC721PoolLenderActions": {
+            "Contract_Name": "IERC721PoolLenderActions",
+            "Functions": []
+        },
+        "IERC721PoolState": {
+            "Contract_Name": "IERC721PoolState",
+            "Functions": []
+        },
+        "IERC721Taker": {
+            "Contract_Name": "IERC721Taker",
+            "Functions": []
+        },
+        "IPositionManager": {
+            "Contract_Name": "IPositionManager",
+            "Functions": []
+        },
+        "IPositionManagerDerivedState": {
+            "Contract_Name": "IPositionManagerDerivedState",
+            "Functions": []
+        },
+        "IPositionManagerErrors": {
+            "Contract_Name": "IPositionManagerErrors",
+            "Functions": []
+        },
+        "IPositionManagerEvents": {
+            "Contract_Name": "IPositionManagerEvents",
+            "Functions": []
+        },
+        "IPositionManagerOwnerActions": {
+            "Contract_Name": "IPositionManagerOwnerActions",
+            "Functions": []
+        },
+        "IPositionManagerState": {
+            "Contract_Name": "IPositionManagerState",
+            "Functions": []
+        },
+        "BorrowerActions": {
+            "Contract_Name": "BorrowerActions",
+            "Functions": [
+                {
+                    "Function": "drawDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "repayDebt",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "borrowerAddress_ != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "stampLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "_inAuction(auctions_,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "KickerActions": {
+            "Contract_Name": "KickerActions",
+            "Functions": []
+        },
+        "LPActions": {
+            "Contract_Name": "LPActions",
+            "Functions": [
+                {
+                    "Function": "transferLP",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "newOwnerAddress_ != msg.sender && ! approvedTransferors_[newOwnerAddress_][msg.sender]"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "LenderActions": {
+            "Contract_Name": "LenderActions",
+            "Functions": []
+        },
+        "PoolCommons": {
+            "Contract_Name": "PoolCommons",
+            "Functions": [
+                {
+                    "Function": "flashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "receiver_.onFlashLoan(msg.sender,token_,amount_,0,data_) != keccak256(bytes)(ERC3156FlashBorrower.onFlashLoan)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PositionNFTSVG": {
+            "Contract_Name": "PositionNFTSVG",
+            "Functions": []
+        },
+        "SettlerActions": {
+            "Contract_Name": "SettlerActions",
+            "Functions": []
+        },
+        "TakerActions": {
+            "Contract_Name": "TakerActions",
+            "Functions": []
+        },
+        "Buckets": {
+            "Contract_Name": "Buckets",
+            "Functions": []
+        },
+        "Deposits": {
+            "Contract_Name": "Deposits",
+            "Functions": []
+        },
+        "Loans": {
+            "Contract_Name": "Loans",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    },
+    "0x936Ab482d6bd111910a42849D3A51Ff80BB0A711": {
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "ERC20Burnable": {
+            "Contract_Name": "ERC20Burnable",
+            "Functions": []
+        },
+        "ERC20Wrapper": {
+            "Contract_Name": "ERC20Wrapper",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "ERC20Permit": {
+            "Contract_Name": "ERC20Permit",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Counters": {
+            "Contract_Name": "Counters",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "ECDSA": {
+            "Contract_Name": "ECDSA",
+            "Functions": []
+        },
+        "EIP712": {
+            "Contract_Name": "EIP712",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "IERC20Token": {
+            "Contract_Name": "IERC20Token",
+            "Functions": []
+        },
+        "BurnWrappedAjna": {
+            "Contract_Name": "BurnWrappedAjna",
+            "Functions": []
+        }
+    },
+    "0x74d5b005ca64a5C9EE3611Bdc6F6C02D93C84b2f": {
+        "IVotes": {
+            "Contract_Name": "IVotes",
+            "Functions": []
+        },
+        "ReentrancyGuard": {
+            "Contract_Name": "ReentrancyGuard",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "GrantFund": {
+            "Contract_Name": "GrantFund",
+            "Functions": [
+                {
+                    "Function": "execute",
+                    "Modifiers": [
+                        "nonReentrant"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_ENTERED",
+                        "_status",
+                        "_NOT_ENTERED"
+                    ],
+                    "state_variables_written": [
+                        "_proposals",
+                        "_status"
+                    ]
+                },
+                {
+                    "Function": "screeningVote",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "pastScreeningVotesCast + votes_ > _getVotesScreening(distributionId,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "_screeningVote",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "pastScreeningVotesCast + votes_ > _getVotesScreening(distributionId,msg.sender)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ],
+            "storage_values": {
+                "_status": 1
+            }
+        },
+        "Storage": {
+            "Contract_Name": "Storage",
+            "Functions": []
+        },
+        "IGrantFund": {
+            "Contract_Name": "IGrantFund",
+            "Functions": []
+        },
+        "IGrantFundActions": {
+            "Contract_Name": "IGrantFundActions",
+            "Functions": []
+        },
+        "IGrantFundErrors": {
+            "Contract_Name": "IGrantFundErrors",
+            "Functions": []
+        },
+        "IGrantFundEvents": {
+            "Contract_Name": "IGrantFundEvents",
+            "Functions": []
+        },
+        "IGrantFundState": {
+            "Contract_Name": "IGrantFundState",
+            "Functions": []
+        },
+        "Maths": {
+            "Contract_Name": "Maths",
+            "Functions": []
+        }
+    }
+}
