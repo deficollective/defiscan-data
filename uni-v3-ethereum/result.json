@@ -1,0 +1,3416 @@
+{
+    "0x1F98431c8aD98523631AE4a59f267346ea31F984": {
+        "NoDelegateCall": {
+            "Contract_Name": "NoDelegateCall",
+            "Functions": []
+        },
+        "UniswapV3Factory": {
+            "Contract_Name": "UniswapV3Factory",
+            "Functions": [
+                {
+                    "Function": "createPool",
+                    "Modifiers": [
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "getPool",
+                        "parameters"
+                    ]
+                },
+                {
+                    "Function": "setOwner",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == owner)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "owner"
+                    ]
+                },
+                {
+                    "Function": "enableFeeAmount",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == owner)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "feeAmountTickSpacing"
+                    ]
+                }
+            ]
+        },
+        "UniswapV3Pool": {
+            "Contract_Name": "UniswapV3Pool",
+            "Functions": [
+                {
+                    "Function": "snapshotCumulativesInside",
+                    "Modifiers": [
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "observe",
+                    "Modifiers": [
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "increaseObservationCardinalityNext",
+                    "Modifiers": [
+                        "lock",
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "_modifyPosition",
+                    "Modifiers": [
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "liquidity",
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "mint",
+                    "Modifiers": [
+                        "lock",
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "liquidity",
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "collect",
+                    "Modifiers": [
+                        "lock"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0"
+                    ],
+                    "state_variables_written": [
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "burn",
+                    "Modifiers": [
+                        "lock",
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "liquidity",
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "swap",
+                    "Modifiers": [
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "slot0",
+                        "feeGrowthGlobal1X128",
+                        "protocolFees",
+                        "liquidity",
+                        "feeGrowthGlobal0X128"
+                    ]
+                },
+                {
+                    "Function": "flash",
+                    "Modifiers": [
+                        "lock",
+                        "noDelegateCall"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "original",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "feeGrowthGlobal1X128",
+                        "protocolFees",
+                        "slot0",
+                        "feeGrowthGlobal0X128"
+                    ]
+                },
+                {
+                    "Function": "setFeeProtocol",
+                    "Modifiers": [
+                        "lock",
+                        "onlyFactoryOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == IUniswapV3Factory(factory).owner())",
+                        "require(bool)(msg.sender == IUniswapV3Factory(factory).owner())"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "msg.sender",
+                        "factory"
+                    ],
+                    "state_variables_written": [
+                        "slot0"
+                    ]
+                },
+                {
+                    "Function": "collectProtocol",
+                    "Modifiers": [
+                        "lock",
+                        "onlyFactoryOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == IUniswapV3Factory(factory).owner())",
+                        "require(bool)(msg.sender == IUniswapV3Factory(factory).owner())"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot0",
+                        "msg.sender",
+                        "factory"
+                    ],
+                    "state_variables_written": [
+                        "protocolFees",
+                        "slot0"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "slot0": "0000000000000000000000000000000000000000000000000000000000000000"
+            }
+        },
+        "UniswapV3PoolDeployer": {
+            "Contract_Name": "UniswapV3PoolDeployer",
+            "Functions": []
+        },
+        "IERC20Minimal": {
+            "Contract_Name": "IERC20Minimal",
+            "Functions": []
+        },
+        "IUniswapV3Factory": {
+            "Contract_Name": "IUniswapV3Factory",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolDeployer": {
+            "Contract_Name": "IUniswapV3PoolDeployer",
+            "Functions": []
+        },
+        "IUniswapV3FlashCallback": {
+            "Contract_Name": "IUniswapV3FlashCallback",
+            "Functions": []
+        },
+        "IUniswapV3MintCallback": {
+            "Contract_Name": "IUniswapV3MintCallback",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "BitMath": {
+            "Contract_Name": "BitMath",
+            "Functions": []
+        },
+        "FixedPoint128": {
+            "Contract_Name": "FixedPoint128",
+            "Functions": []
+        },
+        "FixedPoint96": {
+            "Contract_Name": "FixedPoint96",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "LiquidityMath": {
+            "Contract_Name": "LiquidityMath",
+            "Functions": []
+        },
+        "LowGasSafeMath": {
+            "Contract_Name": "LowGasSafeMath",
+            "Functions": []
+        },
+        "Oracle": {
+            "Contract_Name": "Oracle",
+            "Functions": []
+        },
+        "Position": {
+            "Contract_Name": "Position",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "SqrtPriceMath": {
+            "Contract_Name": "SqrtPriceMath",
+            "Functions": []
+        },
+        "SwapMath": {
+            "Contract_Name": "SwapMath",
+            "Functions": []
+        },
+        "Tick": {
+            "Contract_Name": "Tick",
+            "Functions": []
+        },
+        "TickBitmap": {
+            "Contract_Name": "TickBitmap",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        },
+        "UnsafeMath": {
+            "Contract_Name": "UnsafeMath",
+            "Functions": []
+        }
+    },
+    "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696": {
+        "Multicall2": {
+            "Contract_Name": "Multicall2",
+            "Functions": []
+        }
+    },
+    "0xB753548F6E010e7e680BA186F9Ca1BdAB2E90cf2": {
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Ownable": {
+            "Contract_Name": "Ownable",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                }
+            ]
+        },
+        "Proxy": {
+            "Contract_Name": "Proxy",
+            "Functions": []
+        },
+        "ProxyAdmin": {
+            "Contract_Name": "ProxyAdmin",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "changeProxyAdmin",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgrade",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeAndCall",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ],
+            "storage_values": {
+                "_owner": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC"
+            }
+        },
+        "TransparentUpgradeableProxy": {
+            "Contract_Name": "TransparentUpgradeableProxy",
+            "Functions": [
+                {
+                    "Function": "_fallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "fallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "admin",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_IMPLEMENTATION_SLOT",
+                        "implementation",
+                        "adm",
+                        "slot",
+                        "impl",
+                        "_ADMIN_SLOT",
+                        "msg.sender",
+                        "slot",
+                        "result__delegate_asm_0",
+                        "switch_expr_1598_164_3__delegate_asm_0"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "implementation",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_IMPLEMENTATION_SLOT",
+                        "implementation",
+                        "adm",
+                        "slot",
+                        "impl",
+                        "_ADMIN_SLOT",
+                        "msg.sender",
+                        "slot",
+                        "result__delegate_asm_0",
+                        "switch_expr_1598_164_3__delegate_asm_0"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "changeAdmin",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_IMPLEMENTATION_SLOT",
+                        "implementation",
+                        "adm",
+                        "slot",
+                        "impl",
+                        "_ADMIN_SLOT",
+                        "msg.sender",
+                        "slot",
+                        "result__delegate_asm_0",
+                        "switch_expr_1598_164_3__delegate_asm_0"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeTo",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_IMPLEMENTATION_SLOT",
+                        "implementation",
+                        "adm",
+                        "slot",
+                        "impl",
+                        "_ADMIN_SLOT",
+                        "msg.sender",
+                        "slot",
+                        "result__delegate_asm_0",
+                        "switch_expr_1598_164_3__delegate_asm_0"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeToAndCall",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "_IMPLEMENTATION_SLOT",
+                        "implementation",
+                        "adm",
+                        "slot",
+                        "impl",
+                        "_ADMIN_SLOT",
+                        "msg.sender",
+                        "slot",
+                        "result__delegate_asm_0",
+                        "switch_expr_1598_164_3__delegate_asm_0"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "_beforeFallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "UpgradeableProxy": {
+            "Contract_Name": "UpgradeableProxy",
+            "Functions": []
+        }
+    },
+    "0xbfd8137f7d1516D3ea5cA83523914859ec47F573": {
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "ITickLens": {
+            "Contract_Name": "ITickLens",
+            "Functions": []
+        },
+        "TickLens": {
+            "Contract_Name": "TickLens",
+            "Functions": []
+        }
+    },
+    "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6": {
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IQuoter": {
+            "Contract_Name": "IQuoter",
+            "Functions": []
+        },
+        "Quoter": {
+            "Contract_Name": "Quoter",
+            "Functions": [
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "BytesLib": {
+            "Contract_Name": "BytesLib",
+            "Functions": []
+        },
+        "CallbackValidation": {
+            "Contract_Name": "CallbackValidation",
+            "Functions": [
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Path": {
+            "Contract_Name": "Path",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        }
+    },
+    "0xE592427A0AEce92De3Edee1F18E0157C05861564": {
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "LowGasSafeMath": {
+            "Contract_Name": "LowGasSafeMath",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "SwapRouter": {
+            "Contract_Name": "SwapRouter",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "amountInCached"
+                    ]
+                },
+                {
+                    "Function": "exactInputSingle",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "deadline",
+                        "block.timestamp"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "exactInput",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "deadline",
+                        "block.timestamp"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "exactOutputSingle",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "deadline",
+                        "block.timestamp"
+                    ],
+                    "state_variables_written": [
+                        "amountInCached"
+                    ]
+                },
+                {
+                    "Function": "exactOutput",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "deadline",
+                        "block.timestamp"
+                    ],
+                    "state_variables_written": [
+                        "amountInCached"
+                    ]
+                }
+            ]
+        },
+        "BlockTimestamp": {
+            "Contract_Name": "BlockTimestamp",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "PeripheryPayments": {
+            "Contract_Name": "PeripheryPayments",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryPaymentsWithFee": {
+            "Contract_Name": "PeripheryPaymentsWithFee",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryValidation": {
+            "Contract_Name": "PeripheryValidation",
+            "Functions": []
+        },
+        "SelfPermit": {
+            "Contract_Name": "SelfPermit",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPeripheryPaymentsWithFee": {
+            "Contract_Name": "IPeripheryPaymentsWithFee",
+            "Functions": []
+        },
+        "ISelfPermit": {
+            "Contract_Name": "ISelfPermit",
+            "Functions": []
+        },
+        "ISwapRouter": {
+            "Contract_Name": "ISwapRouter",
+            "Functions": []
+        },
+        "IERC20PermitAllowed": {
+            "Contract_Name": "IERC20PermitAllowed",
+            "Functions": []
+        },
+        "IWETH9": {
+            "Contract_Name": "IWETH9",
+            "Functions": []
+        },
+        "BytesLib": {
+            "Contract_Name": "BytesLib",
+            "Functions": []
+        },
+        "CallbackValidation": {
+            "Contract_Name": "CallbackValidation",
+            "Functions": [
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Path": {
+            "Contract_Name": "Path",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        }
+    },
+    "0x42B24A95702b9986e82d421cC3568932790A48Ec": {
+        "SafeMath": {
+            "Contract_Name": "SafeMath",
+            "Functions": []
+        },
+        "SignedSafeMath": {
+            "Contract_Name": "SignedSafeMath",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "BitMath": {
+            "Contract_Name": "BitMath",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "Base64": {
+            "Contract_Name": "Base64",
+            "Functions": []
+        },
+        "HexStrings": {
+            "Contract_Name": "HexStrings",
+            "Functions": []
+        },
+        "NFTDescriptor": {
+            "Contract_Name": "NFTDescriptor",
+            "Functions": []
+        },
+        "NFTSVG": {
+            "Contract_Name": "NFTSVG",
+            "Functions": []
+        }
+    },
+    "0x91ae842A5Ffd8d12023116943e72A606179294f3": {
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "SafeMath": {
+            "Contract_Name": "SafeMath",
+            "Functions": []
+        },
+        "SignedSafeMath": {
+            "Contract_Name": "SignedSafeMath",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Enumerable": {
+            "Contract_Name": "IERC721Enumerable",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "AddressStringUtil": {
+            "Contract_Name": "AddressStringUtil",
+            "Functions": []
+        },
+        "SafeERC20Namer": {
+            "Contract_Name": "SafeERC20Namer",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "BitMath": {
+            "Contract_Name": "BitMath",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "Base64": {
+            "Contract_Name": "Base64",
+            "Functions": []
+        },
+        "NonfungibleTokenPositionDescriptor": {
+            "Contract_Name": "NonfungibleTokenPositionDescriptor",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "IERC721Permit": {
+            "Contract_Name": "IERC721Permit",
+            "Functions": []
+        },
+        "INonfungiblePositionManager": {
+            "Contract_Name": "INonfungiblePositionManager",
+            "Functions": []
+        },
+        "INonfungibleTokenPositionDescriptor": {
+            "Contract_Name": "INonfungibleTokenPositionDescriptor",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPoolInitializer": {
+            "Contract_Name": "IPoolInitializer",
+            "Functions": []
+        },
+        "ChainId": {
+            "Contract_Name": "ChainId",
+            "Functions": []
+        },
+        "HexStrings": {
+            "Contract_Name": "HexStrings",
+            "Functions": []
+        },
+        "NFTDescriptor": {
+            "Contract_Name": "NFTDescriptor",
+            "Functions": []
+        },
+        "NFTSVG": {
+            "Contract_Name": "NFTSVG",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "TokenRatioSortOrder": {
+            "Contract_Name": "TokenRatioSortOrder",
+            "Functions": []
+        }
+    },
+    "0xEe6A57eC80ea46401049E92587E52f5Ec1c24785": {
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Ownable": {
+            "Contract_Name": "Ownable",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                }
+            ]
+        },
+        "Proxy": {
+            "Contract_Name": "Proxy",
+            "Functions": []
+        },
+        "ProxyAdmin": {
+            "Contract_Name": "ProxyAdmin",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "changeProxyAdmin",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgrade",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeAndCall",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ],
+            "storage_values": {
+                "_owner": "0x0000000000000000000000000000000000000000"
+            }
+        },
+        "TransparentUpgradeableProxy": {
+            "Contract_Name": "TransparentUpgradeableProxy",
+            "Functions": [
+                {
+                    "Function": "_fallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "fallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "admin",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot",
+                        "_ADMIN_SLOT",
+                        "implementation",
+                        "result__delegate_asm_0",
+                        "_IMPLEMENTATION_SLOT",
+                        "impl",
+                        "switch_expr_1598_164_3__delegate_asm_0",
+                        "msg.sender",
+                        "slot",
+                        "adm"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "implementation",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot",
+                        "_ADMIN_SLOT",
+                        "implementation",
+                        "result__delegate_asm_0",
+                        "_IMPLEMENTATION_SLOT",
+                        "impl",
+                        "switch_expr_1598_164_3__delegate_asm_0",
+                        "msg.sender",
+                        "slot",
+                        "adm"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "changeAdmin",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot",
+                        "_ADMIN_SLOT",
+                        "implementation",
+                        "result__delegate_asm_0",
+                        "_IMPLEMENTATION_SLOT",
+                        "impl",
+                        "switch_expr_1598_164_3__delegate_asm_0",
+                        "msg.sender",
+                        "slot",
+                        "adm"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeTo",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot",
+                        "_ADMIN_SLOT",
+                        "implementation",
+                        "result__delegate_asm_0",
+                        "_IMPLEMENTATION_SLOT",
+                        "impl",
+                        "switch_expr_1598_164_3__delegate_asm_0",
+                        "msg.sender",
+                        "slot",
+                        "adm"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "upgradeToAndCall",
+                    "Modifiers": [
+                        "ifAdmin"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender == _admin()",
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)",
+                        "msg.sender == _admin()"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "slot",
+                        "_ADMIN_SLOT",
+                        "implementation",
+                        "result__delegate_asm_0",
+                        "_IMPLEMENTATION_SLOT",
+                        "impl",
+                        "switch_expr_1598_164_3__delegate_asm_0",
+                        "msg.sender",
+                        "slot",
+                        "adm"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "_beforeFallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender != _admin(),TransparentUpgradeableProxy: admin cannot fallback to proxy target)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "UpgradeableProxy": {
+            "Contract_Name": "UpgradeableProxy",
+            "Functions": []
+        }
+    },
+    "0xC36442b4a4522E871399CD717aBDD847Ab11FE88": {
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "ERC165": {
+            "Contract_Name": "ERC165",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "SafeMath": {
+            "Contract_Name": "SafeMath",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "ERC721": {
+            "Contract_Name": "ERC721",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Enumerable": {
+            "Contract_Name": "IERC721Enumerable",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "IERC721Receiver": {
+            "Contract_Name": "IERC721Receiver",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "EnumerableMap": {
+            "Contract_Name": "EnumerableMap",
+            "Functions": []
+        },
+        "EnumerableSet": {
+            "Contract_Name": "EnumerableSet",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "IUniswapV3Factory": {
+            "Contract_Name": "IUniswapV3Factory",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3MintCallback": {
+            "Contract_Name": "IUniswapV3MintCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "FixedPoint128": {
+            "Contract_Name": "FixedPoint128",
+            "Functions": []
+        },
+        "FixedPoint96": {
+            "Contract_Name": "FixedPoint96",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "NonfungiblePositionManager": {
+            "Contract_Name": "NonfungiblePositionManager",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "uniswapV3MintCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "mint",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "deadline"
+                    ],
+                    "state_variables_written": [
+                        "_poolIds",
+                        "_positions",
+                        "_nextPoolId",
+                        "_poolIdToPoolKey",
+                        "_nextId"
+                    ]
+                },
+                {
+                    "Function": "increaseLiquidity",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "deadline"
+                    ],
+                    "state_variables_written": [
+                        "_positions"
+                    ]
+                },
+                {
+                    "Function": "decreaseLiquidity",
+                    "Modifiers": [
+                        "checkDeadline",
+                        "isAuthorizedForToken"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)",
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "key",
+                        "tokenId",
+                        "map",
+                        "_tokenOwners",
+                        "map",
+                        "errorMessage",
+                        "owner",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "errorMessage",
+                        "tokenId",
+                        "key",
+                        "spender",
+                        "key",
+                        "key",
+                        "operator",
+                        "map",
+                        "_positions",
+                        "tokenId",
+                        "owner",
+                        "keyIndex",
+                        "EnumerableMap",
+                        "tokenId",
+                        "map",
+                        "block.timestamp",
+                        "deadline"
+                    ],
+                    "state_variables_written": [
+                        "_positions"
+                    ]
+                },
+                {
+                    "Function": "collect",
+                    "Modifiers": [
+                        "isAuthorizedForToken"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)",
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "key",
+                        "tokenId",
+                        "map",
+                        "_tokenOwners",
+                        "map",
+                        "errorMessage",
+                        "owner",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "errorMessage",
+                        "tokenId",
+                        "key",
+                        "spender",
+                        "key",
+                        "key",
+                        "operator",
+                        "map",
+                        "_positions",
+                        "tokenId",
+                        "owner",
+                        "keyIndex",
+                        "EnumerableMap",
+                        "tokenId",
+                        "map"
+                    ],
+                    "state_variables_written": [
+                        "_positions"
+                    ]
+                },
+                {
+                    "Function": "burn",
+                    "Modifiers": [
+                        "isAuthorizedForToken"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)",
+                        "require(bool,string)(_isApprovedOrOwner(msg.sender,tokenId),Not approved)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "key",
+                        "tokenId",
+                        "map",
+                        "_tokenOwners",
+                        "map",
+                        "errorMessage",
+                        "owner",
+                        "tokenId",
+                        "msg.sender",
+                        "_operatorApprovals",
+                        "errorMessage",
+                        "tokenId",
+                        "key",
+                        "spender",
+                        "key",
+                        "key",
+                        "operator",
+                        "map",
+                        "_positions",
+                        "tokenId",
+                        "owner",
+                        "keyIndex",
+                        "EnumerableMap",
+                        "tokenId",
+                        "map"
+                    ],
+                    "state_variables_written": [
+                        "_tokenURIs",
+                        "_positions"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "_tokenOwners": 807546,
+                "_operatorApprovals": false,
+                "_positions": 0
+            }
+        },
+        "BlockTimestamp": {
+            "Contract_Name": "BlockTimestamp",
+            "Functions": []
+        },
+        "ERC721Permit": {
+            "Contract_Name": "ERC721Permit",
+            "Functions": []
+        },
+        "LiquidityManagement": {
+            "Contract_Name": "LiquidityManagement",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "uniswapV3MintCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "PeripheryPayments": {
+            "Contract_Name": "PeripheryPayments",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryValidation": {
+            "Contract_Name": "PeripheryValidation",
+            "Functions": []
+        },
+        "PoolInitializer": {
+            "Contract_Name": "PoolInitializer",
+            "Functions": []
+        },
+        "SelfPermit": {
+            "Contract_Name": "SelfPermit",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IERC721Permit": {
+            "Contract_Name": "IERC721Permit",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "INonfungiblePositionManager": {
+            "Contract_Name": "INonfungiblePositionManager",
+            "Functions": []
+        },
+        "INonfungibleTokenPositionDescriptor": {
+            "Contract_Name": "INonfungibleTokenPositionDescriptor",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPoolInitializer": {
+            "Contract_Name": "IPoolInitializer",
+            "Functions": []
+        },
+        "ISelfPermit": {
+            "Contract_Name": "ISelfPermit",
+            "Functions": []
+        },
+        "IERC1271": {
+            "Contract_Name": "IERC1271",
+            "Functions": []
+        },
+        "IERC20PermitAllowed": {
+            "Contract_Name": "IERC20PermitAllowed",
+            "Functions": []
+        },
+        "IWETH9": {
+            "Contract_Name": "IWETH9",
+            "Functions": []
+        },
+        "CallbackValidation": {
+            "Contract_Name": "CallbackValidation",
+            "Functions": [
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "ChainId": {
+            "Contract_Name": "ChainId",
+            "Functions": []
+        },
+        "LiquidityAmounts": {
+            "Contract_Name": "LiquidityAmounts",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "PositionKey": {
+            "Contract_Name": "PositionKey",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        }
+    },
+    "0xA5644E29708357803b5A882D272c41cC0dF92B34": {
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Enumerable": {
+            "Contract_Name": "IERC721Enumerable",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "IUniswapV2Pair": {
+            "Contract_Name": "IUniswapV2Pair",
+            "Functions": []
+        },
+        "IUniswapV3Factory": {
+            "Contract_Name": "IUniswapV3Factory",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "LowGasSafeMath": {
+            "Contract_Name": "LowGasSafeMath",
+            "Functions": []
+        },
+        "V3Migrator": {
+            "Contract_Name": "V3Migrator",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "PoolInitializer": {
+            "Contract_Name": "PoolInitializer",
+            "Functions": []
+        },
+        "SelfPermit": {
+            "Contract_Name": "SelfPermit",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IERC721Permit": {
+            "Contract_Name": "IERC721Permit",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "INonfungiblePositionManager": {
+            "Contract_Name": "INonfungiblePositionManager",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPoolInitializer": {
+            "Contract_Name": "IPoolInitializer",
+            "Functions": []
+        },
+        "ISelfPermit": {
+            "Contract_Name": "ISelfPermit",
+            "Functions": []
+        },
+        "IV3Migrator": {
+            "Contract_Name": "IV3Migrator",
+            "Functions": []
+        },
+        "IERC20PermitAllowed": {
+            "Contract_Name": "IERC20PermitAllowed",
+            "Functions": []
+        },
+        "IWETH9": {
+            "Contract_Name": "IWETH9",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        }
+    },
+    "0x61fFE014bA17989E743c5F6cB21bF9697530B21e": {
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "BitMath": {
+            "Contract_Name": "BitMath",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "TickBitmap": {
+            "Contract_Name": "TickBitmap",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "BytesLib": {
+            "Contract_Name": "BytesLib",
+            "Functions": []
+        },
+        "CallbackValidation": {
+            "Contract_Name": "CallbackValidation",
+            "Functions": [
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Path": {
+            "Contract_Name": "Path",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "IQuoterV2": {
+            "Contract_Name": "IQuoterV2",
+            "Functions": []
+        },
+        "QuoterV2": {
+            "Contract_Name": "QuoterV2",
+            "Functions": [
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PoolTicksCounter": {
+            "Contract_Name": "PoolTicksCounter",
+            "Functions": []
+        }
+    },
+    "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45": {
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Enumerable": {
+            "Contract_Name": "IERC721Enumerable",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "IUniswapV2Pair": {
+            "Contract_Name": "IUniswapV2Pair",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "LowGasSafeMath": {
+            "Contract_Name": "LowGasSafeMath",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "TickMath": {
+            "Contract_Name": "TickMath",
+            "Functions": []
+        },
+        "BlockTimestamp": {
+            "Contract_Name": "BlockTimestamp",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "PeripheryImmutableState": {
+            "Contract_Name": "PeripheryImmutableState",
+            "Functions": []
+        },
+        "PeripheryPayments": {
+            "Contract_Name": "PeripheryPayments",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryPaymentsWithFee": {
+            "Contract_Name": "PeripheryPaymentsWithFee",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryValidation": {
+            "Contract_Name": "PeripheryValidation",
+            "Functions": []
+        },
+        "SelfPermit": {
+            "Contract_Name": "SelfPermit",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IERC721Permit": {
+            "Contract_Name": "IERC721Permit",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "INonfungiblePositionManager": {
+            "Contract_Name": "INonfungiblePositionManager",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPeripheryPaymentsWithFee": {
+            "Contract_Name": "IPeripheryPaymentsWithFee",
+            "Functions": []
+        },
+        "IPoolInitializer": {
+            "Contract_Name": "IPoolInitializer",
+            "Functions": []
+        },
+        "ISelfPermit": {
+            "Contract_Name": "ISelfPermit",
+            "Functions": []
+        },
+        "IERC20PermitAllowed": {
+            "Contract_Name": "IERC20PermitAllowed",
+            "Functions": []
+        },
+        "IWETH9": {
+            "Contract_Name": "IWETH9",
+            "Functions": []
+        },
+        "BytesLib": {
+            "Contract_Name": "BytesLib",
+            "Functions": []
+        },
+        "CallbackValidation": {
+            "Contract_Name": "CallbackValidation",
+            "Functions": [
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "verifyCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "OracleLibrary": {
+            "Contract_Name": "OracleLibrary",
+            "Functions": []
+        },
+        "Path": {
+            "Contract_Name": "Path",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        },
+        "SwapRouter02": {
+            "Contract_Name": "SwapRouter02",
+            "Functions": [
+                {
+                    "Function": "selfPermitIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < value"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "selfPermitAllowedIfNecessary",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "IERC20(token).allowance(msg.sender,address(this)) < type()(uint256).max"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "multicall",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "deadline",
+                        "block.timestamp"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "multicall",
+                    "Modifiers": [
+                        "checkPreviousBlockhash"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "previousBlockhash",
+                        "block.number"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "amountInCached"
+                    ]
+                },
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "V2SwapRouter": {
+            "Contract_Name": "V2SwapRouter",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "V3SwapRouter": {
+            "Contract_Name": "V3SwapRouter",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool)(msg.sender == address(pool))"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "amountInCached"
+                    ]
+                }
+            ]
+        },
+        "ApproveAndCall": {
+            "Contract_Name": "ApproveAndCall",
+            "Functions": []
+        },
+        "ImmutableState": {
+            "Contract_Name": "ImmutableState",
+            "Functions": []
+        },
+        "MulticallExtended": {
+            "Contract_Name": "MulticallExtended",
+            "Functions": [
+                {
+                    "Function": "multicall",
+                    "Modifiers": [
+                        "checkDeadline"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "deadline"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "multicall",
+                    "Modifiers": [
+                        "checkPreviousBlockhash"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "previousBlockhash",
+                        "block.number"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "OracleSlippage": {
+            "Contract_Name": "OracleSlippage",
+            "Functions": []
+        },
+        "PeripheryPaymentsExtended": {
+            "Contract_Name": "PeripheryPaymentsExtended",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryPaymentsWithFeeExtended": {
+            "Contract_Name": "PeripheryPaymentsWithFeeExtended",
+            "Functions": [
+                {
+                    "Function": "receive",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == WETH9,Not WETH9)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PeripheryValidationExtended": {
+            "Contract_Name": "PeripheryValidationExtended",
+            "Functions": []
+        },
+        "IApproveAndCall": {
+            "Contract_Name": "IApproveAndCall",
+            "Functions": []
+        },
+        "IImmutableState": {
+            "Contract_Name": "IImmutableState",
+            "Functions": []
+        },
+        "IMulticallExtended": {
+            "Contract_Name": "IMulticallExtended",
+            "Functions": []
+        },
+        "IOracleSlippage": {
+            "Contract_Name": "IOracleSlippage",
+            "Functions": []
+        },
+        "IPeripheryPaymentsExtended": {
+            "Contract_Name": "IPeripheryPaymentsExtended",
+            "Functions": []
+        },
+        "IPeripheryPaymentsWithFeeExtended": {
+            "Contract_Name": "IPeripheryPaymentsWithFeeExtended",
+            "Functions": []
+        },
+        "ISwapRouter02": {
+            "Contract_Name": "ISwapRouter02",
+            "Functions": []
+        },
+        "IV2SwapRouter": {
+            "Contract_Name": "IV2SwapRouter",
+            "Functions": []
+        },
+        "IV3SwapRouter": {
+            "Contract_Name": "IV3SwapRouter",
+            "Functions": []
+        },
+        "Constants": {
+            "Contract_Name": "Constants",
+            "Functions": []
+        },
+        "UniswapV2Library": {
+            "Contract_Name": "UniswapV2Library",
+            "Functions": []
+        }
+    },
+    "0x000000000022D473030F116dDEE9F6B43aC78BA3": {
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "SafeTransferLib": {
+            "Contract_Name": "SafeTransferLib",
+            "Functions": []
+        },
+        "AllowanceTransfer": {
+            "Contract_Name": "AllowanceTransfer",
+            "Functions": []
+        },
+        "EIP712": {
+            "Contract_Name": "EIP712",
+            "Functions": []
+        },
+        "Permit2": {
+            "Contract_Name": "Permit2",
+            "Functions": []
+        },
+        "SignatureTransfer": {
+            "Contract_Name": "SignatureTransfer",
+            "Functions": []
+        },
+        "IAllowanceTransfer": {
+            "Contract_Name": "IAllowanceTransfer",
+            "Functions": []
+        },
+        "IERC1271": {
+            "Contract_Name": "IERC1271",
+            "Functions": []
+        },
+        "ISignatureTransfer": {
+            "Contract_Name": "ISignatureTransfer",
+            "Functions": []
+        },
+        "Allowance": {
+            "Contract_Name": "Allowance",
+            "Functions": []
+        },
+        "PermitHash": {
+            "Contract_Name": "PermitHash",
+            "Functions": []
+        },
+        "SignatureVerification": {
+            "Contract_Name": "SignatureVerification",
+            "Functions": []
+        }
+    },
+    "0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD": {
+        "UniversalRouter": {
+            "Contract_Name": "UniversalRouter",
+            "Functions": [
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "computePoolAddress(tokenIn,tokenOut,fee) != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "execute",
+                    "Modifiers": [
+                        "checkDeadline",
+                        "isNotLocked"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender != address(this)",
+                        "msg.sender != address(this)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "deadline",
+                        "NOT_LOCKED_FLAG",
+                        "msg.sender",
+                        "lockedBy",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "lockedBy",
+                        "maxAmountInCached"
+                    ]
+                },
+                {
+                    "Function": "execute",
+                    "Modifiers": [
+                        "isNotLocked"
+                    ],
+                    "msg.sender_conditions": [
+                        "msg.sender != address(this)",
+                        "msg.sender != address(this)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "NOT_LOCKED_FLAG",
+                        "msg.sender",
+                        "lockedBy",
+                        "this"
+                    ],
+                    "state_variables_written": [
+                        "lockedBy",
+                        "maxAmountInCached"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "lockedBy": "0x0000000000000000000000000000000000000001"
+            }
+        },
+        "Callbacks": {
+            "Contract_Name": "Callbacks",
+            "Functions": []
+        },
+        "Dispatcher": {
+            "Contract_Name": "Dispatcher",
+            "Functions": [
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "computePoolAddress(tokenIn,tokenOut,fee) != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "LockAndMsgSender": {
+            "Contract_Name": "LockAndMsgSender",
+            "Functions": []
+        },
+        "RewardsCollector": {
+            "Contract_Name": "RewardsCollector",
+            "Functions": []
+        },
+        "RouterImmutables": {
+            "Contract_Name": "RouterImmutables",
+            "Functions": []
+        },
+        "IRewardsCollector": {
+            "Contract_Name": "IRewardsCollector",
+            "Functions": []
+        },
+        "IUniversalRouter": {
+            "Contract_Name": "IUniversalRouter",
+            "Functions": []
+        },
+        "ICryptoPunksMarket": {
+            "Contract_Name": "ICryptoPunksMarket",
+            "Functions": []
+        },
+        "IWETH9": {
+            "Contract_Name": "IWETH9",
+            "Functions": []
+        },
+        "Commands": {
+            "Contract_Name": "Commands",
+            "Functions": []
+        },
+        "Constants": {
+            "Contract_Name": "Constants",
+            "Functions": []
+        },
+        "Payments": {
+            "Contract_Name": "Payments",
+            "Functions": []
+        },
+        "Permit2Payments": {
+            "Contract_Name": "Permit2Payments",
+            "Functions": []
+        },
+        "UniswapV2Library": {
+            "Contract_Name": "UniswapV2Library",
+            "Functions": []
+        },
+        "V2SwapRouter": {
+            "Contract_Name": "V2SwapRouter",
+            "Functions": []
+        },
+        "BytesLib": {
+            "Contract_Name": "BytesLib",
+            "Functions": []
+        },
+        "V3Path": {
+            "Contract_Name": "V3Path",
+            "Functions": []
+        },
+        "V3SwapRouter": {
+            "Contract_Name": "V3SwapRouter",
+            "Functions": [
+                {
+                    "Function": "uniswapV3SwapCallback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "computePoolAddress(tokenIn,tokenOut,fee) != msg.sender"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IAllowanceTransfer": {
+            "Contract_Name": "IAllowanceTransfer",
+            "Functions": []
+        },
+        "SafeCast160": {
+            "Contract_Name": "SafeCast160",
+            "Functions": []
+        },
+        "ERC1155": {
+            "Contract_Name": "ERC1155",
+            "Functions": [
+                {
+                    "Function": "safeTransferFrom",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == from || isApprovedForAll[from][msg.sender],NOT_AUTHORIZED)",
+                        "require(bool,string)(ERC1155TokenReceiver(to).onERC1155Received(msg.sender,from,id,amount,data) == ERC1155TokenReceiver.onERC1155Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "balanceOf"
+                    ]
+                },
+                {
+                    "Function": "safeBatchTransferFrom",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == from || isApprovedForAll[from][msg.sender],NOT_AUTHORIZED)",
+                        "require(bool,string)(ERC1155TokenReceiver(to).onERC1155BatchReceived(msg.sender,from,ids,amounts,data) == ERC1155TokenReceiver.onERC1155BatchReceived.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "balanceOf"
+                    ]
+                },
+                {
+                    "Function": "_mint",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(ERC1155TokenReceiver(to).onERC1155Received(msg.sender,address(0),id,amount,data) == ERC1155TokenReceiver.onERC1155Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "balanceOf"
+                    ]
+                },
+                {
+                    "Function": "_batchMint",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(ERC1155TokenReceiver(to).onERC1155BatchReceived(msg.sender,address(0),ids,amounts,data) == ERC1155TokenReceiver.onERC1155BatchReceived.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "balanceOf"
+                    ]
+                }
+            ]
+        },
+        "ERC1155TokenReceiver": {
+            "Contract_Name": "ERC1155TokenReceiver",
+            "Functions": []
+        },
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "ERC721": {
+            "Contract_Name": "ERC721",
+            "Functions": [
+                {
+                    "Function": "approve",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner || isApprovedForAll[owner][msg.sender],NOT_AUTHORIZED)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "getApproved"
+                    ]
+                },
+                {
+                    "Function": "transferFrom",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == from || isApprovedForAll[from][msg.sender] || msg.sender == getApproved[id],NOT_AUTHORIZED)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "getApproved",
+                        "_ownerOf",
+                        "_balanceOf"
+                    ]
+                },
+                {
+                    "Function": "safeTransferFrom",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == from || isApprovedForAll[from][msg.sender] || msg.sender == getApproved[id],NOT_AUTHORIZED)",
+                        "require(bool,string)(to.code.length == 0 || ERC721TokenReceiver(to).onERC721Received(msg.sender,from,id,) == ERC721TokenReceiver.onERC721Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "getApproved",
+                        "_ownerOf",
+                        "_balanceOf"
+                    ]
+                },
+                {
+                    "Function": "safeTransferFrom",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == from || isApprovedForAll[from][msg.sender] || msg.sender == getApproved[id],NOT_AUTHORIZED)",
+                        "require(bool,string)(to.code.length == 0 || ERC721TokenReceiver(to).onERC721Received(msg.sender,from,id,data) == ERC721TokenReceiver.onERC721Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "getApproved",
+                        "_ownerOf",
+                        "_balanceOf"
+                    ]
+                },
+                {
+                    "Function": "_safeMint",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(to.code.length == 0 || ERC721TokenReceiver(to).onERC721Received(msg.sender,address(0),id,) == ERC721TokenReceiver.onERC721Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "_ownerOf",
+                        "_balanceOf"
+                    ]
+                },
+                {
+                    "Function": "_safeMint",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(to.code.length == 0 || ERC721TokenReceiver(to).onERC721Received(msg.sender,address(0),id,data) == ERC721TokenReceiver.onERC721Received.selector,UNSAFE_RECIPIENT)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "_ownerOf",
+                        "_balanceOf"
+                    ]
+                }
+            ]
+        },
+        "ERC721TokenReceiver": {
+            "Contract_Name": "ERC721TokenReceiver",
+            "Functions": []
+        },
+        "SafeTransferLib": {
+            "Contract_Name": "SafeTransferLib",
+            "Functions": []
+        },
+        "IERC1155Receiver": {
+            "Contract_Name": "IERC1155Receiver",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC721Receiver": {
+            "Contract_Name": "IERC721Receiver",
+            "Functions": []
+        },
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "IUniswapV2Pair": {
+            "Contract_Name": "IUniswapV2Pair",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3SwapCallback": {
+            "Contract_Name": "IUniswapV3SwapCallback",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        }
+    },
+    "0xe34139463bA50bD61336E0c446Bd8C0867c6fE65": {
+        "IERC165": {
+            "Contract_Name": "IERC165",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IERC721": {
+            "Contract_Name": "IERC721",
+            "Functions": []
+        },
+        "IERC721Enumerable": {
+            "Contract_Name": "IERC721Enumerable",
+            "Functions": []
+        },
+        "IERC721Metadata": {
+            "Contract_Name": "IERC721Metadata",
+            "Functions": []
+        },
+        "IERC721Receiver": {
+            "Contract_Name": "IERC721Receiver",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "IERC20Minimal": {
+            "Contract_Name": "IERC20Minimal",
+            "Functions": []
+        },
+        "IUniswapV3Factory": {
+            "Contract_Name": "IUniswapV3Factory",
+            "Functions": []
+        },
+        "IUniswapV3Pool": {
+            "Contract_Name": "IUniswapV3Pool",
+            "Functions": []
+        },
+        "IUniswapV3PoolActions": {
+            "Contract_Name": "IUniswapV3PoolActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolDerivedState": {
+            "Contract_Name": "IUniswapV3PoolDerivedState",
+            "Functions": []
+        },
+        "IUniswapV3PoolEvents": {
+            "Contract_Name": "IUniswapV3PoolEvents",
+            "Functions": []
+        },
+        "IUniswapV3PoolImmutables": {
+            "Contract_Name": "IUniswapV3PoolImmutables",
+            "Functions": []
+        },
+        "IUniswapV3PoolOwnerActions": {
+            "Contract_Name": "IUniswapV3PoolOwnerActions",
+            "Functions": []
+        },
+        "IUniswapV3PoolState": {
+            "Contract_Name": "IUniswapV3PoolState",
+            "Functions": []
+        },
+        "FullMath": {
+            "Contract_Name": "FullMath",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "IERC721Permit": {
+            "Contract_Name": "IERC721Permit",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "INonfungiblePositionManager": {
+            "Contract_Name": "INonfungiblePositionManager",
+            "Functions": []
+        },
+        "IPeripheryImmutableState": {
+            "Contract_Name": "IPeripheryImmutableState",
+            "Functions": []
+        },
+        "IPeripheryPayments": {
+            "Contract_Name": "IPeripheryPayments",
+            "Functions": []
+        },
+        "IPoolInitializer": {
+            "Contract_Name": "IPoolInitializer",
+            "Functions": []
+        },
+        "PoolAddress": {
+            "Contract_Name": "PoolAddress",
+            "Functions": []
+        },
+        "TransferHelper": {
+            "Contract_Name": "TransferHelper",
+            "Functions": []
+        },
+        "UniswapV3Staker": {
+            "Contract_Name": "UniswapV3Staker",
+            "Functions": [
+                {
+                    "Function": "onERC721Received",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(nonfungiblePositionManager),UniswapV3Staker::onERC721Received: not a univ3 nft)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "_stakes",
+                        "incentives",
+                        "deposits"
+                    ]
+                },
+                {
+                    "Function": "transferDeposit",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(owner == msg.sender,UniswapV3Staker::transferDeposit: can only be called by deposit owner)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "deposits"
+                    ]
+                },
+                {
+                    "Function": "withdrawToken",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(deposit.owner == msg.sender,UniswapV3Staker::withdrawToken: only owner can withdraw token)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "deposits"
+                    ]
+                },
+                {
+                    "Function": "stakeToken",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(deposits[tokenId].owner == msg.sender,UniswapV3Staker::stakeToken: only owner can stake token)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "_stakes",
+                        "incentives",
+                        "deposits"
+                    ]
+                },
+                {
+                    "Function": "unstakeToken",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(deposit.owner == msg.sender,UniswapV3Staker::unstakeToken: only owner can withdraw token before incentive end time)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "rewards",
+                        "incentives",
+                        "deposits"
+                    ]
+                }
+            ]
+        },
+        "IUniswapV3Staker": {
+            "Contract_Name": "IUniswapV3Staker",
+            "Functions": []
+        },
+        "IncentiveId": {
+            "Contract_Name": "IncentiveId",
+            "Functions": []
+        },
+        "NFTPositionInfo": {
+            "Contract_Name": "NFTPositionInfo",
+            "Functions": []
+        },
+        "RewardMath": {
+            "Contract_Name": "RewardMath",
+            "Functions": []
+        },
+        "TransferHelperExtended": {
+            "Contract_Name": "TransferHelperExtended",
+            "Functions": []
+        }
+    }
+}
