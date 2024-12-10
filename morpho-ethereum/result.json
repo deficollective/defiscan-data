@@ -1,0 +1,2129 @@
+{
+    "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb": {
+        "Morpho": {
+            "Contract_Name": "Morpho",
+            "Functions": [
+                {
+                    "Function": "setOwner",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)",
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "ErrorsLib",
+                        "owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "owner"
+                    ]
+                },
+                {
+                    "Function": "enableIrm",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)",
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "ErrorsLib",
+                        "owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "isIrmEnabled"
+                    ]
+                },
+                {
+                    "Function": "enableLltv",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)",
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "ErrorsLib",
+                        "owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "isLltvEnabled"
+                    ]
+                },
+                {
+                    "Function": "setFee",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)",
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "ErrorsLib",
+                        "owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "position",
+                        "market"
+                    ]
+                },
+                {
+                    "Function": "setFeeRecipient",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)",
+                        "require(bool,string)(msg.sender == owner,ErrorsLib.NOT_OWNER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [
+                        "ErrorsLib",
+                        "owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "feeRecipient"
+                    ]
+                },
+                {
+                    "Function": "setAuthorization",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(newIsAuthorized != isAuthorized[msg.sender][authorized],ErrorsLib.ALREADY_SET)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "isAuthorized"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "owner": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa"
+            }
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "IIrm": {
+            "Contract_Name": "IIrm",
+            "Functions": []
+        },
+        "IMorphoBase": {
+            "Contract_Name": "IMorphoBase",
+            "Functions": []
+        },
+        "IMorphoStaticTyping": {
+            "Contract_Name": "IMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMorpho": {
+            "Contract_Name": "IMorpho",
+            "Functions": []
+        },
+        "IMorphoLiquidateCallback": {
+            "Contract_Name": "IMorphoLiquidateCallback",
+            "Functions": []
+        },
+        "IMorphoRepayCallback": {
+            "Contract_Name": "IMorphoRepayCallback",
+            "Functions": []
+        },
+        "IMorphoSupplyCallback": {
+            "Contract_Name": "IMorphoSupplyCallback",
+            "Functions": []
+        },
+        "IMorphoSupplyCollateralCallback": {
+            "Contract_Name": "IMorphoSupplyCollateralCallback",
+            "Functions": []
+        },
+        "IMorphoFlashLoanCallback": {
+            "Contract_Name": "IMorphoFlashLoanCallback",
+            "Functions": []
+        },
+        "IOracle": {
+            "Contract_Name": "IOracle",
+            "Functions": []
+        },
+        "ErrorsLib": {
+            "Contract_Name": "ErrorsLib",
+            "Functions": []
+        },
+        "EventsLib": {
+            "Contract_Name": "EventsLib",
+            "Functions": []
+        },
+        "MarketParamsLib": {
+            "Contract_Name": "MarketParamsLib",
+            "Functions": []
+        },
+        "MathLib": {
+            "Contract_Name": "MathLib",
+            "Functions": []
+        },
+        "IERC20Internal": {
+            "Contract_Name": "IERC20Internal",
+            "Functions": []
+        },
+        "SafeTransferLib": {
+            "Contract_Name": "SafeTransferLib",
+            "Functions": []
+        },
+        "SharesMathLib": {
+            "Contract_Name": "SharesMathLib",
+            "Functions": []
+        },
+        "UtilsLib": {
+            "Contract_Name": "UtilsLib",
+            "Functions": []
+        }
+    },
+    "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC": {
+        "IIrm": {
+            "Contract_Name": "IIrm",
+            "Functions": []
+        },
+        "IMorphoBase": {
+            "Contract_Name": "IMorphoBase",
+            "Functions": []
+        },
+        "IMorphoStaticTyping": {
+            "Contract_Name": "IMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMorpho": {
+            "Contract_Name": "IMorpho",
+            "Functions": []
+        },
+        "MarketParamsLib": {
+            "Contract_Name": "MarketParamsLib",
+            "Functions": []
+        },
+        "MathLib": {
+            "Contract_Name": "MathLib",
+            "Functions": []
+        },
+        "AdaptiveCurveIrm": {
+            "Contract_Name": "AdaptiveCurveIrm",
+            "Functions": [
+                {
+                    "Function": "borrowRate",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == MORPHO,ErrorsLib.NOT_MORPHO)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": [
+                        "rateAtTarget"
+                    ]
+                }
+            ]
+        },
+        "IAdaptiveCurveIrm": {
+            "Contract_Name": "IAdaptiveCurveIrm",
+            "Functions": []
+        },
+        "ErrorsLib": {
+            "Contract_Name": "ErrorsLib",
+            "Functions": []
+        },
+        "UtilsLib": {
+            "Contract_Name": "UtilsLib",
+            "Functions": []
+        },
+        "ConstantsLib": {
+            "Contract_Name": "ConstantsLib",
+            "Functions": []
+        },
+        "ExpLib": {
+            "Contract_Name": "ExpLib",
+            "Functions": []
+        }
+    },
+    "0x3A7bB36Ee3f3eE32A60e9f2b33c1e5f2E83ad766": {
+        "IOracle": {
+            "Contract_Name": "IOracle",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "MorphoChainlinkOracleV2": {
+            "Contract_Name": "MorphoChainlinkOracleV2",
+            "Functions": []
+        },
+        "MorphoChainlinkOracleV2Factory": {
+            "Contract_Name": "MorphoChainlinkOracleV2Factory",
+            "Functions": []
+        },
+        "AggregatorV3Interface": {
+            "Contract_Name": "AggregatorV3Interface",
+            "Functions": []
+        },
+        "IERC4626": {
+            "Contract_Name": "IERC4626",
+            "Functions": []
+        },
+        "IMorphoChainlinkOracleV2": {
+            "Contract_Name": "IMorphoChainlinkOracleV2",
+            "Functions": []
+        },
+        "IMorphoChainlinkOracleV2Factory": {
+            "Contract_Name": "IMorphoChainlinkOracleV2Factory",
+            "Functions": []
+        },
+        "ChainlinkDataFeedLib": {
+            "Contract_Name": "ChainlinkDataFeedLib",
+            "Functions": []
+        },
+        "ErrorsLib": {
+            "Contract_Name": "ErrorsLib",
+            "Functions": []
+        },
+        "VaultLib": {
+            "Contract_Name": "VaultLib",
+            "Functions": []
+        }
+    },
+    "0xA9c3D3a366466Fa809d1Ae982Fb2c46E5fC41101": {
+        "IIrm": {
+            "Contract_Name": "IIrm",
+            "Functions": []
+        },
+        "IMorphoBase": {
+            "Contract_Name": "IMorphoBase",
+            "Functions": []
+        },
+        "IMorphoStaticTyping": {
+            "Contract_Name": "IMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMorpho": {
+            "Contract_Name": "IMorpho",
+            "Functions": []
+        },
+        "ErrorsLib": {
+            "Contract_Name": "ErrorsLib",
+            "Functions": []
+        },
+        "MarketParamsLib": {
+            "Contract_Name": "MarketParamsLib",
+            "Functions": []
+        },
+        "MathLib": {
+            "Contract_Name": "MathLib",
+            "Functions": []
+        },
+        "SharesMathLib": {
+            "Contract_Name": "SharesMathLib",
+            "Functions": []
+        },
+        "UtilsLib": {
+            "Contract_Name": "UtilsLib",
+            "Functions": []
+        },
+        "MorphoBalancesLib": {
+            "Contract_Name": "MorphoBalancesLib",
+            "Functions": []
+        },
+        "MorphoLib": {
+            "Contract_Name": "MorphoLib",
+            "Functions": []
+        },
+        "MorphoStorageLib": {
+            "Contract_Name": "MorphoStorageLib",
+            "Functions": []
+        },
+        "Ownable": {
+            "Contract_Name": "Ownable",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner"
+                    ]
+                }
+            ]
+        },
+        "Ownable2Step": {
+            "Contract_Name": "Ownable2Step",
+            "Functions": [
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner",
+                        "_pendingOwner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner",
+                        "_pendingOwner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_pendingOwner"
+                    ]
+                }
+            ]
+        },
+        "IERC4626": {
+            "Contract_Name": "IERC4626",
+            "Functions": []
+        },
+        "IERC5267": {
+            "Contract_Name": "IERC5267",
+            "Functions": []
+        },
+        "IERC20Errors": {
+            "Contract_Name": "IERC20Errors",
+            "Functions": []
+        },
+        "IERC721Errors": {
+            "Contract_Name": "IERC721Errors",
+            "Functions": []
+        },
+        "IERC1155Errors": {
+            "Contract_Name": "IERC1155Errors",
+            "Functions": []
+        },
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "ERC20Permit": {
+            "Contract_Name": "ERC20Permit",
+            "Functions": []
+        },
+        "ERC4626": {
+            "Contract_Name": "ERC4626",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "Multicall": {
+            "Contract_Name": "Multicall",
+            "Functions": []
+        },
+        "Nonces": {
+            "Contract_Name": "Nonces",
+            "Functions": []
+        },
+        "ShortStrings": {
+            "Contract_Name": "ShortStrings",
+            "Functions": []
+        },
+        "StorageSlot": {
+            "Contract_Name": "StorageSlot",
+            "Functions": []
+        },
+        "Strings": {
+            "Contract_Name": "Strings",
+            "Functions": []
+        },
+        "ECDSA": {
+            "Contract_Name": "ECDSA",
+            "Functions": []
+        },
+        "EIP712": {
+            "Contract_Name": "EIP712",
+            "Functions": []
+        },
+        "MessageHashUtils": {
+            "Contract_Name": "MessageHashUtils",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "SafeCast": {
+            "Contract_Name": "SafeCast",
+            "Functions": []
+        },
+        "SignedMath": {
+            "Contract_Name": "SignedMath",
+            "Functions": []
+        },
+        "MetaMorpho": {
+            "Contract_Name": "MetaMorpho",
+            "Functions": [
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_pendingOwner"
+                    ]
+                },
+                {
+                    "Function": "renounceOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner",
+                        "_pendingOwner"
+                    ]
+                },
+                {
+                    "Function": "transferOwnership",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_owner",
+                        "_pendingOwner"
+                    ]
+                },
+                {
+                    "Function": "setCurator",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "curator"
+                    ]
+                },
+                {
+                    "Function": "setIsAllocator",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "isAllocator"
+                    ]
+                },
+                {
+                    "Function": "setSkimRecipient",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "skimRecipient"
+                    ]
+                },
+                {
+                    "Function": "submitTimelock",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingTimelock",
+                        "timelock"
+                    ]
+                },
+                {
+                    "Function": "setFee",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_totalSupply",
+                        "fee",
+                        "lastTotalAssets",
+                        "_balances"
+                    ]
+                },
+                {
+                    "Function": "setFeeRecipient",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "_totalSupply",
+                        "feeRecipient",
+                        "lastTotalAssets",
+                        "_balances"
+                    ]
+                },
+                {
+                    "Function": "submitGuardian",
+                    "Modifiers": [
+                        "onlyOwner"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingGuardian",
+                        "guardian"
+                    ]
+                },
+                {
+                    "Function": "submitCap",
+                    "Modifiers": [
+                        "onlyCuratorRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "curator",
+                        "_owner",
+                        "sender",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingCap",
+                        "withdrawQueue",
+                        "lastTotalAssets",
+                        "config"
+                    ]
+                },
+                {
+                    "Function": "submitMarketRemoval",
+                    "Modifiers": [
+                        "onlyCuratorRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "curator",
+                        "_owner",
+                        "sender",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "config"
+                    ]
+                },
+                {
+                    "Function": "setSupplyQueue",
+                    "Modifiers": [
+                        "onlyAllocatorRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "msg.sender",
+                        "curator",
+                        "_owner",
+                        "sender",
+                        "isAllocator"
+                    ],
+                    "state_variables_written": [
+                        "supplyQueue"
+                    ]
+                },
+                {
+                    "Function": "updateWithdrawQueue",
+                    "Modifiers": [
+                        "onlyAllocatorRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "msg.sender",
+                        "curator",
+                        "_owner",
+                        "sender",
+                        "isAllocator"
+                    ],
+                    "state_variables_written": [
+                        "withdrawQueue",
+                        "config"
+                    ]
+                },
+                {
+                    "Function": "reallocate",
+                    "Modifiers": [
+                        "onlyAllocatorRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "msg.sender",
+                        "curator",
+                        "_owner",
+                        "sender",
+                        "isAllocator"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "revokePendingTimelock",
+                    "Modifiers": [
+                        "onlyGuardianRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "guardian",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingTimelock"
+                    ]
+                },
+                {
+                    "Function": "revokePendingGuardian",
+                    "Modifiers": [
+                        "onlyGuardianRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "_owner",
+                        "guardian",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingGuardian"
+                    ]
+                },
+                {
+                    "Function": "revokePendingCap",
+                    "Modifiers": [
+                        "onlyCuratorOrGuardianRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "curator",
+                        "_owner",
+                        "guardian",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "pendingCap"
+                    ]
+                },
+                {
+                    "Function": "revokePendingMarketRemoval",
+                    "Modifiers": [
+                        "onlyCuratorOrGuardianRole"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "curator",
+                        "_owner",
+                        "guardian",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": [
+                        "config"
+                    ]
+                },
+                {
+                    "Function": "acceptTimelock",
+                    "Modifiers": [
+                        "afterTimelock"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "validAt"
+                    ],
+                    "state_variables_written": [
+                        "pendingTimelock",
+                        "timelock"
+                    ]
+                },
+                {
+                    "Function": "acceptGuardian",
+                    "Modifiers": [
+                        "afterTimelock"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "validAt"
+                    ],
+                    "state_variables_written": [
+                        "pendingGuardian",
+                        "guardian"
+                    ]
+                },
+                {
+                    "Function": "acceptCap",
+                    "Modifiers": [
+                        "afterTimelock"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "block.timestamp",
+                        "validAt"
+                    ],
+                    "state_variables_written": [
+                        "pendingCap",
+                        "withdrawQueue",
+                        "lastTotalAssets",
+                        "config"
+                    ]
+                }
+            ],
+            "storage_values": {
+                "_owner": "0x0000000000000000000000000000000000000000",
+                "curator": "0x0000000000000000000000000000000000000000",
+                "isAllocator": false,
+                "guardian": "0x0000000000000000000000000000000000000000"
+            }
+        },
+        "MetaMorphoFactory": {
+            "Contract_Name": "MetaMorphoFactory",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "IOwnable": {
+            "Contract_Name": "IOwnable",
+            "Functions": []
+        },
+        "IMetaMorphoBase": {
+            "Contract_Name": "IMetaMorphoBase",
+            "Functions": []
+        },
+        "IMetaMorphoStaticTyping": {
+            "Contract_Name": "IMetaMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMetaMorpho": {
+            "Contract_Name": "IMetaMorpho",
+            "Functions": []
+        },
+        "IMetaMorphoFactory": {
+            "Contract_Name": "IMetaMorphoFactory",
+            "Functions": []
+        },
+        "ConstantsLib": {
+            "Contract_Name": "ConstantsLib",
+            "Functions": []
+        },
+        "EventsLib": {
+            "Contract_Name": "EventsLib",
+            "Functions": []
+        },
+        "PendingLib": {
+            "Contract_Name": "PendingLib",
+            "Functions": []
+        }
+    },
+    "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077": {
+        "IMorphoBase": {
+            "Contract_Name": "IMorphoBase",
+            "Functions": []
+        },
+        "IMorphoStaticTyping": {
+            "Contract_Name": "IMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMorpho": {
+            "Contract_Name": "IMorpho",
+            "Functions": []
+        },
+        "IMorphoLiquidateCallback": {
+            "Contract_Name": "IMorphoLiquidateCallback",
+            "Functions": []
+        },
+        "IMorphoRepayCallback": {
+            "Contract_Name": "IMorphoRepayCallback",
+            "Functions": []
+        },
+        "IMorphoSupplyCallback": {
+            "Contract_Name": "IMorphoSupplyCallback",
+            "Functions": []
+        },
+        "IMorphoSupplyCollateralCallback": {
+            "Contract_Name": "IMorphoSupplyCollateralCallback",
+            "Functions": []
+        },
+        "IMorphoFlashLoanCallback": {
+            "Contract_Name": "IMorphoFlashLoanCallback",
+            "Functions": []
+        },
+        "Math": {
+            "Contract_Name": "Math",
+            "Functions": []
+        },
+        "IERC4626": {
+            "Contract_Name": "IERC4626",
+            "Functions": []
+        },
+        "ERC20": {
+            "Contract_Name": "ERC20",
+            "Functions": []
+        },
+        "IERC20": {
+            "Contract_Name": "IERC20",
+            "Functions": []
+        },
+        "ERC20Wrapper": {
+            "Contract_Name": "ERC20Wrapper",
+            "Functions": []
+        },
+        "IERC20Metadata": {
+            "Contract_Name": "IERC20Metadata",
+            "Functions": []
+        },
+        "IERC20Permit": {
+            "Contract_Name": "IERC20Permit",
+            "Functions": []
+        },
+        "SafeERC20": {
+            "Contract_Name": "SafeERC20",
+            "Functions": []
+        },
+        "Address": {
+            "Contract_Name": "Address",
+            "Functions": []
+        },
+        "Context": {
+            "Contract_Name": "Context",
+            "Functions": []
+        },
+        "IAllowanceTransfer": {
+            "Contract_Name": "IAllowanceTransfer",
+            "Functions": []
+        },
+        "IDAIPermit": {
+            "Contract_Name": "IDAIPermit",
+            "Functions": []
+        },
+        "IEIP712": {
+            "Contract_Name": "IEIP712",
+            "Functions": []
+        },
+        "Permit2Lib": {
+            "Contract_Name": "Permit2Lib",
+            "Functions": []
+        },
+        "SafeCast160": {
+            "Contract_Name": "SafeCast160",
+            "Functions": []
+        },
+        "IMulticall": {
+            "Contract_Name": "IMulticall",
+            "Functions": []
+        },
+        "IOwnable": {
+            "Contract_Name": "IOwnable",
+            "Functions": []
+        },
+        "IMetaMorphoBase": {
+            "Contract_Name": "IMetaMorphoBase",
+            "Functions": []
+        },
+        "IMetaMorphoStaticTyping": {
+            "Contract_Name": "IMetaMorphoStaticTyping",
+            "Functions": []
+        },
+        "IMetaMorpho": {
+            "Contract_Name": "IMetaMorpho",
+            "Functions": []
+        },
+        "PendingLib": {
+            "Contract_Name": "PendingLib",
+            "Functions": []
+        },
+        "IPublicAllocatorBase": {
+            "Contract_Name": "IPublicAllocatorBase",
+            "Functions": []
+        },
+        "IPublicAllocatorStaticTyping": {
+            "Contract_Name": "IPublicAllocatorStaticTyping",
+            "Functions": []
+        },
+        "IPublicAllocator": {
+            "Contract_Name": "IPublicAllocator",
+            "Functions": []
+        },
+        "SafeTransferLib": {
+            "Contract_Name": "SafeTransferLib",
+            "Functions": []
+        },
+        "IUniversalRewardsDistributor": {
+            "Contract_Name": "IUniversalRewardsDistributor",
+            "Functions": []
+        },
+        "IPendingRoot": {
+            "Contract_Name": "IPendingRoot",
+            "Functions": []
+        },
+        "BaseBundler": {
+            "Contract_Name": "BaseBundler",
+            "Functions": []
+        },
+        "ERC20WrapperBundler": {
+            "Contract_Name": "ERC20WrapperBundler",
+            "Functions": [
+                {
+                    "Function": "erc20WrapperDepositFor",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20WrapperWithdrawTo",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "ERC4626Bundler": {
+            "Contract_Name": "ERC4626Bundler",
+            "Functions": [
+                {
+                    "Function": "erc4626Mint",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Deposit",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Withdraw",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Redeem",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "MorphoBundler": {
+            "Contract_Name": "MorphoBundler",
+            "Functions": [
+                {
+                    "Function": "onMorphoSupply",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoSupplyCollateral",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoRepay",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoFlashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSetAuthorizationWithSig",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSupply",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSupplyCollateral",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoBorrow",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoRepay",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoWithdraw",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoWithdrawCollateral",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoFlashLoan",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "reallocateTo",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "_callback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "Permit2Bundler": {
+            "Contract_Name": "Permit2Bundler",
+            "Functions": [
+                {
+                    "Function": "approve2",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "transferFrom2",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "PermitBundler": {
+            "Contract_Name": "PermitBundler",
+            "Functions": [
+                {
+                    "Function": "permit",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "StEthBundler": {
+            "Contract_Name": "StEthBundler",
+            "Functions": [
+                {
+                    "Function": "stakeEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "wrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "unwrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "TransferBundler": {
+            "Contract_Name": "TransferBundler",
+            "Functions": [
+                {
+                    "Function": "nativeTransfer",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20Transfer",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20TransferFrom",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "UrdBundler": {
+            "Contract_Name": "UrdBundler",
+            "Functions": [
+                {
+                    "Function": "urdClaim",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "WNativeBundler": {
+            "Contract_Name": "WNativeBundler",
+            "Functions": [
+                {
+                    "Function": "wrapNative",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "unwrapNative",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "EthereumBundlerV2": {
+            "Contract_Name": "EthereumBundlerV2",
+            "Functions": [
+                {
+                    "Function": "erc20WrapperDepositFor",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20WrapperWithdrawTo",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoSupply",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoSupplyCollateral",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoRepay",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "onMorphoFlashLoan",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSetAuthorizationWithSig",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSupply",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoSupplyCollateral",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoBorrow",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoRepay",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoWithdraw",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoWithdrawCollateral",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "morphoFlashLoan",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "reallocateTo",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "_callback",
+                    "Modifiers": [],
+                    "msg.sender_conditions": [
+                        "require(bool,string)(msg.sender == address(MORPHO),ErrorsLib.UNAUTHORIZED_SENDER)"
+                    ],
+                    "state_variables_read_inside_modifiers": [],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "urdClaim",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "stakeEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "wrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "unwrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "wrapNative",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "unwrapNative",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Mint",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Deposit",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Withdraw",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc4626Redeem",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "approve2",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "transferFrom2",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "permitDai",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "permit",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "nativeTransfer",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20Transfer",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "erc20TransferFrom",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "MORPHO",
+                        "msg.sender",
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib"
+                    ],
+                    "state_variables_written": []
+                }
+            ],
+            "storage_values": {
+                "_initiator": "0x0000000000000000000000000000000000000001"
+            }
+        },
+        "EthereumPermitBundler": {
+            "Contract_Name": "EthereumPermitBundler",
+            "Functions": [
+                {
+                    "Function": "permit",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "permitDai",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "EthereumStEthBundler": {
+            "Contract_Name": "EthereumStEthBundler",
+            "Functions": [
+                {
+                    "Function": "stakeEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "wrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                },
+                {
+                    "Function": "unwrapStEth",
+                    "Modifiers": [
+                        "protected"
+                    ],
+                    "msg.sender_conditions": [],
+                    "state_variables_read_inside_modifiers": [
+                        "UNSET_INITIATOR",
+                        "_initiator",
+                        "ErrorsLib",
+                        "msg.sender"
+                    ],
+                    "state_variables_written": []
+                }
+            ]
+        },
+        "IDaiPermit": {
+            "Contract_Name": "IDaiPermit",
+            "Functions": []
+        },
+        "MainnetLib": {
+            "Contract_Name": "MainnetLib",
+            "Functions": []
+        },
+        "IMorphoBundler": {
+            "Contract_Name": "IMorphoBundler",
+            "Functions": []
+        },
+        "IStEth": {
+            "Contract_Name": "IStEth",
+            "Functions": []
+        },
+        "IWNative": {
+            "Contract_Name": "IWNative",
+            "Functions": []
+        },
+        "IWstEth": {
+            "Contract_Name": "IWstEth",
+            "Functions": []
+        },
+        "ErrorsLib": {
+            "Contract_Name": "ErrorsLib",
+            "Functions": []
+        }
+    }
+}

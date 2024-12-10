@@ -1,0 +1,1 @@
+{"solc_remaps": ["ds-test/=lib/forge-std/lib/ds-test/src/", "forge-std/=lib/forge-std/src/"], "solc_solcs_select": "0.8.19", "solc_args": "--via-ir --optimize --optimize-runs 999999 --evm-version paris"}
